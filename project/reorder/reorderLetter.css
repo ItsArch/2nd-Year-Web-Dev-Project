@@ -1,0 +1,74 @@
+/*NAME: ARTJOMS BOBROVS CODE: C00308488 COURSE: IT MANAGEMENT DATE: --/03/2026  SCREEN: Reorder css for the reorder letter page*/
+.main
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;/*makes the font size 20px*/
+        border-style: groove;/*grooved borderstyle*/
+        margin:auto;
+        width: 700px;
+        height: min-content;
+        background-color: #e2edf5;
+        padding-bottom: 25px;
+    }
+p
+    {
+        padding-left: 20px;
+    }
+.pharmaAddress
+    {
+        padding-top: 35px;
+        padding-right: 20px;
+        text-align: right;/*aligns the text to the right*/
+    }
+.supplierAddress
+    {
+        padding-left: 20px;
+    }
+.order
+    {
+        text-align: center;/*centers text*/
+    }
+.ending
+    {
+        text-align: center;/*centers text*/
+    }
+
+    th, td
+        {
+            padding-left: 50px;/*spaces out the table fields*/
+        }
+.totalCost
+    {
+        font-weight: bolder;/*makes a flex*/
+        display: flex;
+        width: 80%;
+        padding-left:50px;
+        justify-content: space-between;/*creats space in between the fields*/
+    }
+form
+    {
+        width: 120px;
+        margin: auto;
+    }
+button
+    {
+        background-color: rgb(90, 147, 207);
+        width: 120px;
+        height: 60px;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+        cursor: pointer;
+
+        transition: opacity 0.15s;
+    }
+    button:hover
+        {
+            opacity: 0.7;
+        }
+    button:active
+        {
+            opacity: 0.4;
+        }

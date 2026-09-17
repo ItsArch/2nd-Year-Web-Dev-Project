@@ -1,0 +1,95 @@
+/*NAME: ARTJOMS BOBROVS CODE: C00308488 COURSE: IT MANAGEMENT DATE: --/03/2026 SCREEN: Reorder css for the reorder html page*/
+#box {
+    font-size: 18px;
+    font-family: Arial;
+    background-color: rgb(242, 245, 248);
+    margin: auto; /*centres the form*/
+    width: 1100px;
+    height: min-content 700px; /*border is only as high as its contents*/
+    border: none; /*no border*/
+    border-radius: 15px; /*makes the edges rounded*/
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); /*adds a shadow to the form*/
+    padding-bottom: 25px;
+}
+h1 {
+    padding-top: 30px;
+    margin-bottom: 20px; /*adds spacing below the text*/
+    text-align: center;
+}
+    
+.supplierSelect
+    {
+        padding-left: 50px;
+    }
+#suppListbox, #drugListbox
+    {
+        font-size: 20px;
+    }
+#reorderAmount
+    {
+        width: 250px;
+    }
+#submitButton 
+    {
+        margin: auto;
+        background-color: rgb(90, 147, 207);
+        width: 120px;
+        height: 60px;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 500;
+        transition: opacity 0.15s; /*adds a smooth transition*/
+    }
+    #submitButton:hover 
+        {
+            opacity: 0.7; /*on hover the button is a little lighter*/
+        }
+    #submitButton:active 
+        {
+            opacity: 0.4; /*on press it gets lighter*/
+        }
+.grid
+    {
+        display: grid;/*places the divs beside eachother, acts like an inline-block*/
+        grid-template-columns: 2fr 1fr;/*2 divs, one has 2 thirds of the space and the other as 1 third*/
+        margin-bottom: 15px;
+    }
+.table 
+    {
+        margin-left: 25px;
+        justify-self: center;/*centers the table on the container*/
+        margin-right: 25px;
+        border-collapse: collapse;/*makes the fields have a shared border*/
+        background: white;
+    }
+
+    .table th /*the background colour of the title column*/
+        {
+            background-color: #2c3e50;
+            color: white;
+            padding: 13px;
+            text-align: left;
+        }
+    
+    .table td 
+        {
+            padding: 15px 10px; /*adds more padding to the top and right of the cells*/
+        }
+    .table tr
+        {
+            border: 1px solid #969595;/*adds a faint border*/
+        }
+        tr:nth-child(even)
+            {
+                background-color: #e6e6e6;/*every second row is greyer*/
+            }
+   
+    .table tr:hover /*on hover the cells row highlights*/
+        {
+            background-color: #f5f5f5;
+        }

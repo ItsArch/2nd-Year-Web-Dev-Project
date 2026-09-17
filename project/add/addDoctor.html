@@ -1,0 +1,166 @@
+<!--//NAME: ARTJOMS BOBROVS CODE: C00308488 COURSE: IT MANAGEMENT DATE: --/02/2026 SCREEN: Add Doctor - form for adding a new doctor to the database-->
+<html>
+<head>
+    <title>Doc Add</title>
+    <link rel="stylesheet" href="homepage.css"><!--links the style sheet-->
+    <link rel="stylesheet" href="addDoctor.css"><!--links the style sheet-->
+    <script src="addDoctor.js"></script>
+    
+</head>
+<body bgcolor="#FAF9F6"><!--the background of the page is an off-white-->
+
+    <div class="navbar1"><!--links the css to make the first nav bar-->
+        BlueLeaf Pharmacy
+    </div>
+
+    <nav class="navbar2"><!--links the css to make the second nav bar-->
+        <div class="button"> <a href="underconstruction.html">COUNTER SALES</a></div>  <!--links to a form-->
+
+        <div class="button"> <a href="underconstruction.html">DISPENSE DRUGS</a></div> <!--links to a form-->
+
+        <div class="dropdown">STOCK CONRTOL MENU <!--drop down menu for the stock control-->
+            <div class="dropdown-content"><!--stock control drop down box-->
+                <a href="manReorder.html.php">Reorder Drugs</a>
+                <a href="underconstruction.html">Reorder Other Stock</a><!--dont need this one-->
+                <hr>
+                <a href="underconstruction.html">Recieve Drug Deliveries</a>
+                <a href="underconstruction.html">Reorder other Deliveries</a><!--dont need this one-->
+            </div>
+        </div>  
+
+        <div class="dropdown"> SUPPLIER ACCOUNTS MENU<!--supplier menu-->
+            <div class="dropdown-content"><!--supplier drop down box-->
+                <a href="underconstruction.html">New Invoices from Suppliers</a>
+                <a href="underconstruction.html">Payment to Suppliers</a>
+            </div>
+        </div>
+
+        <div class="dropdown"> FILE MAINTENENCE MENU<!--file menu-->
+            <div class="dropdown-content"><!--file drop down box (will link to forms)-->
+                <a href="underconstruction.html">Add a New Customer</a>
+                <a href="underconstruction.html">Delete a Customer</a>
+                <a href="underconstruction.html">Amend / View a Customer </a>
+                <hr>
+                <a href="addDoctor.html">Add a New Doctor</a>
+                <a href="deleteDoc.html.php">Delete a Doctor</a>
+                <a href="AmendViewDoc.html.php">Amend / View a Doctor</a>
+                <hr>
+                <a href="underconstruction.html">Add a New Drug</a>
+                <a href="underconstruction.html">Delete a Drug</a>
+                <a href="underconstruction.html">Amend / View a Drug </a>
+                <hr>
+                <a href="underconstruction.html">Add a New Supplier</a>
+                <a href="underconstruction.html">Delete a Supplier</a>
+                <a href="underconstruction.html">Amend / View a Supplier</a>
+                <hr>
+                <a href="underconstruction.html">Add a New Stock Item</a>
+                <a href="underconstruction.html">Delete a Stock Item</a>
+                <a href="underconstruction.html">Amend / View a Stock Item</a>
+            </div>
+        </div>
+
+        <div class="dropdown"> REPORTS MENU<!--report menu-->
+            <div class="dropdown-content"><!--report drop down box-->
+                <a href="underconstruction.html">Drugs Report</a>
+                <a href="underconstruction.html">Prescriptions Report</a>
+                <a href="underconstruction.html">Orders Report</a>
+                <a href="underconstruction.html">Customer/Prescription Report</a>
+            </div>
+        </div>
+
+        <div class="button"><a href="underconstruction.html">EXIT</a></div><!--will be a button-->
+</nav>
+
+<!----------------------------------------------------dividing off the homepage look with the form---------------------------------------------------------------------------------------------------------->
+
+    <form id="box" action="addDoctor.php" onsubmit="return verifySend()" method="post" autocomplete= off ><!--when form gets submitted the php gets called, turns off autocomplete-->
+
+        <h1 class="title">Doctor Form</h1><!--the title of the form-->
+
+            <div class="doc_details"> <!--controls the doctors details div-->
+            <h2>Doctor Details </h2><!--names the section of input-->
+            <p>
+                <!--input type text, id of last_name, required field, pattern doesnt allow of numbers-->
+                <input type="text" name="last_name" id="last_name" placeholder="Firstname" required maxlength="20" pattern="[A-Z]{1}[a-zA-Z ]{2,}" placeholder="Surname">
+            </p>
+            <p id="firstname"><!--controls the location of the firstname label and input-->
+                <!--input type text, id of first_name, required field, pattern doesnt allow of numbers-->
+                <input type="text" name="first_name" id="first_name" placeholder="Surname" required maxlength="20" pattern="[A-Z]{1}[a-zA-Z ]{2,}" placeholder="Firstname">
+            </p>
+            <p>
+                <label>Mobile Number</label>
+                <br><!--space break-->
+                <input type="text" name="mobile_no" id="mobile_no" maxlength="20" placeholder="xxx xxx xxxx" required pattern="[0-9]{3}[ ]{1}[0-9]{3}[ ]{1}[0-9]{4}">
+            </p>
+        </div>
+
+        <div class="grid">
+            <div class="sur_details"><!--controls the surgery input div-->
+
+                <h2>Surgery Details </h2><!--Names the section of input-->
+                <p>
+                    <label for="surgery_address">Surgery Address</label><!--label for the text area-->
+                    <br>
+                    <br><!--space break-->
+                    <!--text area allows the text inputted to break if it tries to go off the input box, required, adds 25 colums to the text box and 4 rows-->
+                    <textarea name="surgery_address" id="surgery_address" maxlength="70" rows="5" cols="25" pattern="[a-zA-Z0-9 ]" required></textarea>
+                </p>
+                    
+                <p id="surgeryeircode">
+                    <label>Surgery Eircode</label><!--label for surgery eircode-->
+                    <br>
+                    <br><!--space break-->
+                    <!--type of input is text, id surgery_eir,pattern is the irish eircode format (allows for 1 space)-->
+                    <input type="text" name="surgery_eir" id="surgery_eir" maxlength="8" placeholder="A65 F4E2" required pattern="[a-zA-Z]{1}[0-9]{2}[ ]{1}[a-zA-Z0-9]{4}">
+                </p>
+
+                <p id="surgerytel">
+                    <label>Surgery Phone Number</label><!--label for the surgery telephone number-->
+                    <br>
+                    <br><!--space break-->
+                    <!--if of surgery phone allows only numbers and spaces-->
+                    <input type="text" name="surgery_phone_no" id="surgery_phone_no" maxlength="20" placeholder="xxx xxx xxxx" required pattern="[0-9]{3}[ ]{1}[0-9]{3}[ ]{1}[0-9]{4}">
+                </p>
+            </div>
+        
+        <div class="personal_details"><!--controls the surgery input div-->
+
+            <h2>Personal Details </h2><!--Names the section of input-->
+            <p>
+                <label for="home_address">Home Address</label><!--label for the text area-->
+                <br>
+                <br><!--space break-->
+                <!--text area allows the text inputted to break if it tries to go off the input box, required, adds 25 colums to the text box and 4 rows-->
+                <textarea name="home_address" id="home_address" maxlength="70" rows="5" cols="25" pattern="[a-zA-Z0-9 ]" required ></textarea>
+            </p>
+            <p id="homeeircode">
+                <label>Home Eircode</label><!--label for surgery eircode-->
+                <br>
+                <br><!--space break-->
+                <!--type of input is text, id home_eir, pattern is the irish eircode format (allows for 1 space)-->
+                <input type="text" name="home_eir" id="home_eir" maxlength="8" placeholder="A65 F4E2" required  pattern="[a-zA-Z]{1}[0-9]{2}[ ]{1}[a-zA-Z0-9]{4}">
+            </p>
+
+            <p id="hometel">
+                <label>Home Telephone Number</label><!--label for the surgery telephone number-->
+                <br>
+                <br><!--space break-->
+                <!--id of home_tel_no, allows only numbers and spaces-->
+                <input type="text" name="home_tel_no" id="home_tel_no" maxlength="20" placeholder="xxx xxx xxxx" required pattern="[0-9]{3}[ ]{1}[0-9]{3}[ ]{1}[0-9]{4}">
+            </p>
+        </div>
+    </div>
+        
+
+        <br><!--space break-->
+        <br><!--space break-->
+
+        <div class="buttons">
+            <button type="submit" id="submit">Submit</button><!--submit button with a verification for sending-->
+            <button type="reset" id="clear">Clear</button><!--reset button-->
+        </div>
+
+    </form>
+
+</body>
+</html>

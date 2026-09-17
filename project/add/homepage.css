@@ -1,0 +1,70 @@
+/*<!--//NAME: ARTJOMS BOBROVS CODE: C00308488 COURSE: IT MANAGEMENT DATE: --/02/2026 SCREEN: Add Doctor - css for the homepage-->*/
+.navbar1
+    {
+        margin-top: -8px;/*gets the bar flush with the top of the page*/
+        margin-left:-8px;/*gets the bar flush with the left of the page*/
+        margin-right:-8px;/*gets the bar flush with the right of the page*/
+        background-color:darkblue;/*makes the color of the bar purple*/
+        height: 100px;/*makes the height of the navigation bar 100px*/
+        color: white; /*makes the font colour white*/
+        font-size: xx-large;/*makes the font size xx-large*/
+        font-weight: bold;/*makes the font appear bold*/
+        font-family: Arial;
+
+        display:flex;
+        align-items: center;/*moves the text to middle vertically*/
+        justify-content: center;/*moves the text to middle horizontally*/
+    }
+.navbar2
+    {
+        margin-left:-8px;/*gets the bar flush with the left of the page*/
+        margin-right:-8px;/*gets the bar flush with the right of the page*/
+        display: flex; /*sets the flex*/
+        background-color:blue;/*makes the color of the bar blueviolet*/
+        height: 50px;/*makes the height of the navigation bar 100px*/
+        justify-content:space-around;/*moves all of the flex's to the right of the container*/
+        align-items: center;/*aligns the text to the center of the flex*/
+        font-family: Arial;
+    }
+
+.dropdown 
+    {
+        color: white; /*makes the font colour of the text white*/
+        font-size: larger;/*makes the text larger*/
+        cursor: pointer;/*your cursour will be a pointer rather than a stick looking thing*/
+    }
+    .dropdown-content /*controls the content in the box*/
+        {
+            display: none;/*it wont show the boxes until you hover over it */
+            position: absolute;
+            background-color: lightblue;/*the background of the drop menu*/
+            width: 200px;/*the width of the box*/
+            box-shadow: 2px 2px 10px rgba(0, 0, 0);/*adds a black shadow to the box*/ 
+        }
+    .dropdown-content a /*controls the links inside of the drop down box*/
+        {
+            color: black;/*the colour of the linked text is black*/
+            padding: 12px;/*adds 12px of padding around th text*/
+            text-decoration: none;/*removes the underline*/
+            display: block;/*displays all of the content in a block format*/
+        }
+    .dropdown-content a:hover 
+        {
+            background-color: lightskyblue;/*when you hover over text in the dropped box it changes the background*/
+        }
+    .dropdown:hover .dropdown-content 
+        {
+            display: block; /*when you hover over the text in the nav bar the content shows*/
+        }
+
+.button a
+    {
+        color: white;/*makes the text colour white*/
+        font-size: larger;/*makes the text larger*/
+        text-decoration: none;/*gets rid of the underline*/
+    }
+    .button:hover /*when you hover over the text*/
+        {
+            background-color: lightskyblue;/*gets highlighted by this colour*/
+            cursor: pointer;/*your cursour will be a pointer rather than a stick looking thing*/
+        }

@@ -1,0 +1,88 @@
+/*<!--//NAME: ARTJOMS BOBROVS CODE: C00308488 COURSE: IT MANAGEMENT DATE: --/02/2026 SCREEN: Add Doctor - css for the form for adding a new doctor-->*/
+#box {
+    font-size: 18px;
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    background-color: rgb(242, 245, 248);
+    margin: auto; /*centres the form*/
+    width: 650px;
+    height: min-content;
+    border: none; /*no border*/
+    border-radius: 15px; /*makes the edges rounded*/
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); /*adds a shadow to the form*/
+}
+h1 {
+    padding-top: 30px;
+    margin-bottom: 0; /*gets rid of spacing below the text*/
+    text-align: center;
+}
+h4
+    {
+        text-align: center;
+    }
+.doc_details 
+    {
+        display: inline-block; /*makes it so the div only takes as much space as it needs to*/
+        vertical-align: top; /*aligns the divs so the tops are in line with eachother*/
+    }
+.list
+    {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 200px;
+        text-align: center;
+    }
+#listboxDoc
+    {
+        font-size: 18px;
+    }
+.grid {
+    display: grid; /*places the divs beside eachother, acts like an inline-block*/
+    grid-template-columns: 1fr 1fr; /*2 divs, each having equal space on the form*/
+}
+    .grid input {
+        padding: 5px;
+        font-size: 18px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.5); /*a shadow inside the input*/
+    }
+.doc_details input
+    {
+        padding: 5px;
+        font-size: 18px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.5);
+    }
+textarea {
+    resize: none; /*prevents the textarea from being resized*/
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.buttons
+    {
+        margin-left: 25px;
+    }
+button, #amendViewbutton {
+    margin: auto;
+    background-color: rgb(90, 147, 207);
+    width: 120px;
+    height: 60px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: opacity 0.15s; /*adds a smooth transition*/
+}
+    button:hover {
+        opacity: 0.7; /*on hover the button is a little lighter*/
+    }
+    button:active {
+        opacity: 0.4; /*on press it gets lighter*/
+    }
